@@ -9,39 +9,36 @@
 
     [] ➞ []*/
 
-import java.util.*; 
+import java.util.*;
+
 public class Question4 {
     public static void main(String[] args) {
-        int a[]=new int[20];
-        int i,j,temp,max,size;
+        int a[] = new int[20];
+        int i, j, temp, max, size;
         System.out.println("Enter the size of array:");
-        Scanner sc=new Scanner(System.in);
-        size=sc.nextInt();
-        if(size==0){
-            return;
-        }
-        System.out.println("Enter the elements:");
-        for(i=0;i<size;i++)
-        {
-            a[i]=sc.nextInt();  
-        }
-        for(i=0;i<size;i++)
-        {
-            for(j=0;j<i;j++)
-            {   
-                if(a[i]<a[j]) 
-                {
-                    temp=a[i];
-                    a[i]=a[j];
-                    a[j]=temp;
+        Scanner sc = new Scanner(System.in);
+        size = sc.nextInt();
+        if (size == 0) {
+            System.out.println("[]");
+        } else {
+            System.out.println("Enter the elements:");
+            for (i = 0; i < size; i++) {
+                a[i] = sc.nextInt();
+            }
+            for (i = 0; i < size; i++) {
+                for (j = 0; j < i; j++) {
+                    if (a[i] < a[j]) {
+                        temp = a[i];
+                        a[i] = a[j];
+                        a[j] = temp;
+                    }
                 }
             }
-        }
-        System.out.println("Ascending Order:");
-        for(i=0;i<size;i++)
-        {
-            
-            System.out.print(+a[i]+" ");  
+            System.out.println("Ascending Order:");
+            for (i = 0; i < size; i++) {
+
+                System.out.print(+a[i] + " ");
+            }
         }
     }
 }
