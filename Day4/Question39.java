@@ -12,7 +12,7 @@ public class Question39 {
     public static void main(String[] args) {
         System.out.println("Enter the size of an array: ");
         Scanner sc = new Scanner(System.in);
-        int tobemax = 0, max = 0;
+        int curr_max = 0, max = 0;
         int n = sc.nextInt();
         int a[] = new int[n];
         for (int i = 0; i < n; i++) {
@@ -20,12 +20,12 @@ public class Question39 {
             a[i] = sc.nextInt();
         }
         for (int i = 0; i < n; i++) {
-            tobemax = tobemax + a[i];
-            if (tobemax < 0) {
-                tobemax = 0;
+            curr_max = curr_max + a[i];
+            if (curr_max < 0) {
+                curr_max = 0;
             }
-            if (max < tobemax) {
-                max = tobemax;
+            if (max < curr_max) {
+                max = curr_max;
             }
         }
         System.out.println("Max Sum is: " + max);
