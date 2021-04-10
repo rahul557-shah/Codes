@@ -32,9 +32,7 @@ public class Question32 {
             a1.add(e);
         }
         for (int i = 0; i < n; i++) {
-            if (a1.contains(a1.get(i))) {
                 h1.add(a1.get(i));
-            }
         }
         System.out.println(a1);
         System.out.println(h1);
