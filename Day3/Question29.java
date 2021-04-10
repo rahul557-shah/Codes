@@ -22,6 +22,7 @@ public class Question29 {
       result = rem * rem + result;
       n = n / 10;
     }
-    System.out.println(result);
+    int i1=Integer.parseInt(result);
+    System.out.println(i1);
   }
 }
